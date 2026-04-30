@@ -10,15 +10,20 @@ import tkinter as tk
 root = tk.Tk()
 root.title("Pay cheque calculator")
 
-# Create and place GUI widgets on a grid
 
 # Function for doing the calculation for percent of taxes
 
 # Function for doing the calculation for percent of savings
 
+# Create and place GUI widgets on a grid
+
 # Hours worked
 # Label
+label_mass = tk.Label(root, text="Hours worked: ")
+label_mass.grid(column=0, row=0)
 # Entry
+entry_mass = tk.Entry(root)
+entry_mass.grid(column=1, row=0)
 
 # Pay per hour
 # Label
@@ -37,3 +42,5 @@ root.title("Pay cheque calculator")
 # check button
 
 # Calculate button
+
+root.mainloop()
