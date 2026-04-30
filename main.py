@@ -4,8 +4,11 @@ Pay cheque calculator
 """
 
 # Import tkinter for GUI making
+import tkinter as tk
 
 # Set up the root window
+root = tk.Tk()
+root.title("Pay cheque calculator")
 
 # Create and place GUI widgets on a grid
 
