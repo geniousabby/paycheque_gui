@@ -34,34 +34,36 @@ entry_mass.grid(column=1, row=0)
 
 # Pay per hour
 # Label
-label_mass = tk.Label(root, text="Wage per hour: ")
+label_mass = tk.Label(root, text="$ per hour: ")
 label_mass.grid(column=0, row=1)
 
-# Radio button
+# List box
+spinbox = tk.Spinbox(root, from_=1, to=200)
+spinbox.grid(column=1, row=1)
 selected = tk.IntVar()
 
-r1 = tk.Radiobutton(root, text='$15', value=1, variable=selected)
-r1.grid(column=1, row=1)
-
-r2 = tk.Radiobutton(root, text='$20', value=2, variable=selected)
-r2.grid(column=1, row=2)
-
-r3 = tk.Radiobutton(root, text='$30', value=3, variable=selected)
-r3.grid(column=1, row=3)
-
-r4 = tk.Radiobutton(root, text='$50', value=4, variable=selected)
-r4.grid(column=1, row=4)
-
-r5 = tk.Radiobutton(root, text='$75', value=5, variable=selected)
-r5.grid(column=1, row=5)
-
-r6 = tk.Radiobutton(root, text='$100', value=6, variable=selected)
-r6.grid(column=1, row=6)
 
 
 # Taxes
 # Label
-# List box
+label_mass = tk.Label(root, text="Income Tax (%): ")
+label_mass.grid(column=0, row=2)
+
+# Radio button
+r1 = tk.Radiobutton(root, text='5.60%', value=1, variable=selected)
+r1.grid(column=1, row=2)
+
+r1 = tk.Radiobutton(root, text='7.70%', value=1, variable=selected)
+r1.grid(column=1, row=3)
+
+r1 = tk.Radiobutton(root, text='10.50%', value=1, variable=selected)
+r1.grid(column=1, row=4)
+
+r1 = tk.Radiobutton(root, text='12.29%', value=1, variable=selected)
+r1.grid(column=1, row=5)
+
+r1 = tk.Radiobutton(root, text='14.70%', value=1, variable=selected)
+r1.grid(column=1, row=6)
 
 
 # Savings
