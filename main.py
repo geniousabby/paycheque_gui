@@ -12,6 +12,17 @@ import tkinter as tk
 root = tk.Tk()
 root.title("Pay cheque calculator")
 
+# Function to multiple $/hr by hours worked
+def calc_pay_per_hour():
+	"""
+	Multiplies hours worked by $/hr
+	
+	"""
+	
+	pay_per_hour = entry_hrs**selected
+
+	print(f"Pay per hour: {pay_per_hour}")
+
 
 # Function for doing the calculation for percent of taxes
 
