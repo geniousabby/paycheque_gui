@@ -24,18 +24,18 @@ root.title("Pay cheque calculator")
 
 # Hours worked
 # Label
-label_mass = tk.Label(root, text="Hours worked: ")
-label_mass.grid(column=0, row=0)
+label_hrs = tk.Label(root, text="Hours worked: ")
+label_hrs.grid(column=0, row=0)
 
 # Entry
-entry_mass = tk.Entry(root)
-entry_mass.grid(column=1, row=0)
+entry_hrs = tk.Entry(root)
+entry_hrs.grid(column=1, row=0)
 
 
 # Pay per hour
 # Label
-label_mass = tk.Label(root, text="$ per hour: ")
-label_mass.grid(column=0, row=1)
+label_pay = tk.Label(root, text="$ per hour: ")
+label_pay.grid(column=0, row=1)
 
 # List box
 spinbox = tk.Spinbox(root, from_=1, to=200)
@@ -45,8 +45,8 @@ selected = tk.IntVar()
 
 # Taxes
 # Label
-label_mass = tk.Label(root, text="Income Tax (%): ")
-label_mass.grid(column=0, row=2)
+label_taxes = tk.Label(root, text="Income Tax (%): ")
+label_taxes.grid(column=0, row=2)
 
 # Radio button
 r1 = tk.Radiobutton(root, text='5.60%', value=1, variable=selected)
@@ -67,20 +67,20 @@ r1.grid(column=1, row=6)
 
 # Savings
 # Label
-label_mass = tk.Label(root, text="Savings (%): ")
-label_mass.grid(column=0, row=7)
+label_savings = tk.Label(root, text="Savings (%): ")
+label_savings.grid(column=0, row=7)
 # scale
 # Create a Scale Widget
 scale_widget = tk.Scale(root, orient="horizontal", resolution=1,
-                        from_=0, to=100)
+						from_=0, to=100)
 
 scale_widget.grid(column=1, row=7)
 
 
 # Commute
 # Label
-label_mass = tk.Label(root, text="Commute: ")
-label_mass.grid(column=0, row=8)
+label_commute = tk.Label(root, text="Commute: ")
+label_commute.grid(column=0, row=8)
 # check button
 
 # Variables to store checkbox states (1 = checked, 0 = unchecked)
@@ -89,14 +89,14 @@ var_student = tk.IntVar(value=0)
 var_courses = tk.IntVar(value=0)
 
 # Create Checkbuttons
-chk_tutorial = tk.Checkbutton(root, text="Public transit", variable=var_tutorial)
-chk_student = tk.Checkbutton(root, text="Car", variable=var_student)
-chk_courses = tk.Checkbutton(root, text="Walk/bike", variable=var_courses)
+chk_publictransit = tk.Checkbutton(root, text="Public transit", variable=var_tutorial)
+chk_car = tk.Checkbutton(root, text="Car", variable=var_student)
+chk_walk = tk.Checkbutton(root, text="Walk/bike", variable=var_courses)
 
 # Place widgets
-chk_tutorial.grid(column=1, row=8)
-chk_student.grid(column=1, row=9)
-chk_courses.grid(column=1, row=10)
+chk_publictransit.grid(column=1, row=8)
+chk_car.grid(column=1, row=9)
+chk_walk.grid(column=1, row=10)
 
 
 # Calculate button
