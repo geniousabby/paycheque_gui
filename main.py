@@ -12,6 +12,7 @@ import tkinter as tk
 root = tk.Tk()
 root.title("Pay cheque calculator")
 
+
 # Function to multiple $/hr by hours worked
 def calc_pay_per_hour():
 	"""
@@ -63,17 +64,17 @@ label_taxes.grid(column=0, row=2)
 r1 = tk.Radiobutton(root, text='5.60%', value=1, variable=selected)
 r1.grid(column=1, row=2)
 
-r1 = tk.Radiobutton(root, text='7.70%', value=1, variable=selected)
-r1.grid(column=1, row=3)
+r2 = tk.Radiobutton(root, text='7.70%', value=2, variable=selected)
+r2.grid(column=1, row=3)
 
-r1 = tk.Radiobutton(root, text='10.50%', value=1, variable=selected)
-r1.grid(column=1, row=4)
+r3 = tk.Radiobutton(root, text='10.50%', value=3, variable=selected)
+r3.grid(column=1, row=4)
 
-r1 = tk.Radiobutton(root, text='12.29%', value=1, variable=selected)
-r1.grid(column=1, row=5)
+r4 = tk.Radiobutton(root, text='12.29%', value=4, variable=selected)
+r4.grid(column=1, row=5)
 
-r1 = tk.Radiobutton(root, text='14.70%', value=1, variable=selected)
-r1.grid(column=1, row=6)
+r5 = tk.Radiobutton(root, text='14.70%', value=5, variable=selected)
+r5.grid(column=1, row=6)
 
 
 # Savings
