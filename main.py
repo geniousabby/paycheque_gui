@@ -43,7 +43,6 @@ spinbox.grid(column=1, row=1)
 selected = tk.IntVar()
 
 
-
 # Taxes
 # Label
 label_mass = tk.Label(root, text="Income Tax (%): ")
@@ -80,7 +79,24 @@ scale_widget.grid(column=1, row=7)
 
 # Commute
 # Label
+label_mass = tk.Label(root, text="Commute: ")
+label_mass.grid(column=0, row=8)
 # check button
+
+# Variables to store checkbox states (1 = checked, 0 = unchecked)
+var_tutorial = tk.IntVar(value=0)
+var_student = tk.IntVar(value=0)
+var_courses = tk.IntVar(value=0)
+
+# Create Checkbuttons
+chk_tutorial = tk.Checkbutton(root, text="Public transit", variable=var_tutorial)
+chk_student = tk.Checkbutton(root, text="Car", variable=var_student)
+chk_courses = tk.Checkbutton(root, text="Walk/bike", variable=var_courses)
+
+# Place widgets
+chk_tutorial.grid(column=1, row=8)
+chk_student.grid(column=1, row=9)
+chk_courses.grid(column=1, row=10)
 
 
 # Calculate button
