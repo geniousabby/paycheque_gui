@@ -68,7 +68,14 @@ r1.grid(column=1, row=6)
 
 # Savings
 # Label
+label_mass = tk.Label(root, text="Savings (%): ")
+label_mass.grid(column=0, row=7)
 # scale
+# Create a Scale Widget
+scale_widget = tk.Scale(root, orient="horizontal", resolution=1,
+                        from_=0, to=100)
+
+scale_widget.grid(column=1, row=7)
 
 
 # Commute
