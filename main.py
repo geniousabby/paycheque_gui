@@ -10,14 +10,14 @@ import tkinter as tk
 
 # Set up the root window
 root = tk.Tk()
-root.title("Pay cheque calculator")
+root.title("Pay Cheque Calculator")
 
 
 # Function to multiple $/hr by hours worked
 def calc_pay_per_hour():
 	"""
-	Multiplies hours worked by $/hr
-	
+	Calculates total money
+
 	"""
 	
 	pay_per_hour = entry_hrs**selected
@@ -112,6 +112,12 @@ chk_walk.grid(column=1, row=10)
 
 
 # Calculate button
+button_calculate = tk.Button(root, text="Calculate",
+                             command=calc)
+button_calculate.grid(column=0, row=11)
+
+label_money = tk.Label(root, text="$: ")
+label_money.grid(column=1, row=11)
 
 
 root.mainloop()
