@@ -13,26 +13,52 @@ root = tk.Tk()
 root.title("Pay Cheque Calculator")
 
 
-# Function to multiple $/hr by hours worked
-def calc_pay_per_hour():
+
+# Function for doing the calculation for percent of taxes
+def calc():
 	"""
 	Calculates total money
 
 	"""
-	
-	pay_per_hour = entry_hrs**selected
+	# Get hours and pay
 
-	print(f"Pay per hour: {pay_per_hour}")
+	try:
+		hours = float(entry_hrs.get())
+		rate = float(spinbox.get())
+	except ValueError:
+		label_money.config(text="Invalid input")
+		return
+
+	gross = hours * rate
+
+	# Tax percentage based on selected radio button
+	tax_values = [5.6, 7.7, 10.5, 12.29, 14.7]
+	tax_percent = tax_values[selected.get() - 1]
+	tax = gross * (tax_percent / 100)
+
+	# Calculation for percent of savings
+	savings = gross * (scale_widget.get() / 100)
+
+	# Commute cost
+	commute = 0
+	if var_tutorial.get():  # public transit
+		commute += 5
+	if var_student.get():   # car
+		commute += 12
+	if var_courses.get():   # walk/bike
+		commute += 0
+
+	# Final amount
+	final = gross - tax - savings - commute
+	label_money.config(text=f"${final:.2f}")
+
+	label_money.config(text=f"${final_amount:.2f}")
 
 
-# Function for doing the calculation for percent of taxes
 
-
-# Function for doing the calculation for percent of savings
 
 
 # Create and place GUI widgets on a grid
-
 
 # Hours worked
 # Label
@@ -113,7 +139,7 @@ chk_walk.grid(column=1, row=10)
 
 # Calculate button
 button_calculate = tk.Button(root, text="Calculate",
-                             command=calc)
+							 command=calc)
 button_calculate.grid(column=0, row=11)
 
 label_money = tk.Label(root, text="$: ")
