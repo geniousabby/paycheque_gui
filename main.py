@@ -4,8 +4,10 @@ Pay cheque calculator
 """
 
 
+
 # Import tkinter for GUI making
 import tkinter as tk
+
 
 
 # Set up the root window
@@ -56,8 +58,6 @@ def calc():
 
 
 
-
-
 # Create and place GUI widgets on a grid
 
 # Hours worked
@@ -70,6 +70,7 @@ entry_hrs = tk.Entry(root)
 entry_hrs.grid(column=1, row=0)
 
 
+
 # Pay per hour
 # Label
 label_pay = tk.Label(root, text="$ per hour: ")
@@ -79,6 +80,7 @@ label_pay.grid(column=0, row=1)
 spinbox = tk.Spinbox(root, from_=1, to=200)
 spinbox.grid(column=1, row=1)
 selected = tk.IntVar()
+
 
 
 # Taxes
@@ -103,6 +105,7 @@ r5 = tk.Radiobutton(root, text='14.70%', value=5, variable=selected)
 r5.grid(column=1, row=6)
 
 
+
 # Savings
 # Label
 label_savings = tk.Label(root, text="Savings (%): ")
@@ -113,6 +116,7 @@ scale_widget = tk.Scale(root, orient="horizontal", resolution=1,
 						from_=0, to=100)
 
 scale_widget.grid(column=1, row=7)
+
 
 
 # Commute
@@ -137,6 +141,7 @@ chk_car.grid(column=1, row=9)
 chk_walk.grid(column=1, row=10)
 
 
+
 # Calculate button
 button_calculate = tk.Button(root, text="Calculate",
 							 command=calc)
@@ -144,6 +149,7 @@ button_calculate.grid(column=0, row=11)
 
 label_money = tk.Label(root, text="$: ")
 label_money.grid(column=1, row=11)
+
 
 
 root.mainloop()
